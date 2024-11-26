@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for encoding and responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Linking to external stylesheet -->
+  <link rel="stylesheet" href="Style.css">
+  
+  <!-- Linking to Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Preloading an audio file for hover or click effects -->
+  <audio id="heartbeat" src="https://css-tricks.com/examples/SoundOnHover/audio/beep.mp3" preload="auto"></audio>
+  
+  <!-- Page title -->
+  <title>Photography Portfolio</title>
+</head>
+<body>
+  <!-- Main container -->
+  <div class="main-box">
+    <!-- Button section -->
+    <div class="bt">
+      <button class="soundTrigger">Click ME</button>
+    </div>
+ 
+    <!-- Sidebar toggle checkbox and button -->
+    <input type="checkbox" id="sidebarToggle" class="sidebar-toggle soundTrigger">
+    <label for="sidebarToggle" class="toggle-btn">☰</label>
+
+    <!-- Sidebar container -->
+    <div class="sidebar">
+      <!-- Company name or logo -->
+      <div class="Companny"><h2>SAJID</h2></div>
+ 
+      <!-- Sidebar navigation links -->
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+        <li>
+          <a href="">Phone</a>
+        </li>
+      </ul>
+      
+      <!-- Sidebar footer with social media icons -->
+      <div class="sidebar-footer">
+        <ul>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i id="youtube" class="fa-brands fa-youtube"></i>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linking to external JavaScript file -->
+  <script src="Script.js"></script>
+</body>
+</html>

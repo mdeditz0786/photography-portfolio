@@ -1,0 +1,162 @@
+/* Reset styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Button styling in the .bt container */
+.bt button {
+  width: 150px;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: absolute;
+  top: 87%; /* Position button near the bottom center */
+  left: 46%;
+  background: transparent;
+  border: 2px dashed #863ce7; /* Dashed border */
+  box-shadow: 0px 2px 5px aqua; /* Add a shadow for effect */
+  color: white;
+  cursor: pointer;
+  animation: dash 2s linear infinite; /* Border animation */
+}
+
+/* Keyframes for border animation */
+@keyframes dash {
+  0% {
+      border-style: dashed;
+  }
+  50% {
+      border-style: solid;
+  }
+  100% {
+      border-style: dashed;
+  }
+}
+
+/* Hover effect for button */
+.bt button:hover {
+  background: rgba(14, 41, 247, 0.7); /* Semi-transparent background */
+}
+
+/* Main container styling with a full-page background image */
+.main-box {
+  background: url("camera-7726802_1920.jpg");
+  height: 100vh;
+  background-size: cover; /* Cover entire viewport */
+}
+
+/* Sidebar toggle styling */
+.sidebar-toggle {
+  display: none; /* Hide the checkbox */
+}
+
+/* Sidebar toggle button styling */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #5e5c5c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1100;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.toggle-btn:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 0.5); /* Semi-transparent black */
+  text-align: center;
+  position: fixed;
+  left: -250px; /* Hide sidebar by default */
+  overflow-y: auto;
+  transition: left 0.3s ease-in-out; /* Smooth toggle transition */
+  z-index: 1000;
+  border-right: #fabeb7;
+}
+
+/* Sidebar company/logo section */
+.Companny {
+  top: 20px;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 0.7px 2px rgb(85, 83, 83);
+  cursor: pointer;
+}
+
+h2 {
+  color: aqua; /* Company name color */
+}
+
+/* Sidebar navigation menu */
+.sidebar ul {
+  top: 20px;
+  position: relative;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  transition: 0.7s; /* Smooth hover animation */
+  text-align: center;
+}
+
+.sidebar li:hover {
+  background-color: rgb(111, 111, 111); /* Change background on hover */
+  border-radius: 0px 20px;
+  box-shadow: 0px 2px 5px aqua; /* Add glow effect */
+}
+
+/* Sidebar links */
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Sidebar footer (social icons section) */
+.sidebar-footer {
+  bottom: 60%;
+  position: absolute; 
+  width: inherit;
+}
+
+.sidebar-footer i {
+  color: aqua;
+  font-size: 1.8rem;
+  padding: 7px;
+  transition: 0.6s; /* Smooth icon hover animation */
+}
+
+.sidebar-footer i:hover {
+  color: red; /* Icon color on hover */
+}
+
+/* Sidebar behavior when toggled (checkbox checked) */
+.sidebar-toggle:checked ~ .sidebar {
+  left: 0; /* Slide sidebar into view */
+}
+
+/* Adjust toggle button appearance when sidebar is open */
+.sidebar-toggle:checked + .toggle-btn {
+  left: 10px;
+  color: aqua;
+  background-color: black;
+  transition: 0.3s; /* Smooth transition */
+}
